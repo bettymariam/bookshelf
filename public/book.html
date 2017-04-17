@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Galvanize Bookshelf - Book</title>
+    <!--Import Google Icon Font-->
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Import index.css-->
+    <link type="text/css" rel="stylesheet" href="/css/book.css"/>
+
+    <!-- Import styles.css -->
+    <link type="text/css" rel="stylesheet" href="/css/styles.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body class="blue-grey lighten-5">
+    <div class="navbar-fixed">
+      <nav class="blue-grey darken-2">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">
+            <span>
+              <img class="logo-png" src="/images/galvanize.png" />
+            </span>
+            <span class="logo-text">bookshelf</span>
+          </a>
+
+          <a class="button-collapse" data-activates="mobileNav">
+            <i class="material-icons">menu</i>
+          </a>
+
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/index.html">Books</a></li>
+            <li class="firstNavItem"></li>
+            <li class="secondNavItem"></li>
+          </ul>
+
+          <ul id="mobileNav" class="side-nav">
+            <li><a href="/index.html">Books</a></li>
+            <li class="firstNavItem"></li>
+            <li class="secondNavItem"></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+            <img id="cover">
+          </div>
+
+          <div id="book" class="col s12 m8">
+            <h3 id="title"></h3>
+
+            <h5>By <span id="author"></span></h5>
+
+            <p id="description" class="flow-text"></p>
+
+            <h6>Genre: <span id="genre"></span></h6>
+
+            <a id="addFavorite" class="waves-effect waves-light btn-large hide">
+              <i class="material-icons left">thumb_up</i>
+              Add Favorite
+            </a>
+
+            <a id="removeFavorite" class="waves-effect waves-light btn-large hide">
+              <i class="material-icons left">thumb_down</i>
+              Remove Favorite
+            </a>
+
+            <a id="editBook" class="waves-effect waves-light btn-large amber darken-3">
+              <i class="material-icons left">edit</i>
+              Edit
+            </a>
+
+            <a id="deleteBook" class="waves-effect waves-light btn-large red">
+              <i class="material-icons left">delete</i>
+              Delete
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="deleteModal" class="modal">
+        <div class="modal-content">
+          <h4>Delete this book?</h4>
+          <p>You won't be able to undo this operation.</p>
+        </div>
+
+        <div class="modal-footer">
+          <a id="confirmDelete" class="modal-action modal-close waves-effect waves-green btn-flat">
+            <strong>Delete</strong>
+          </a>
+
+          <a id="cancelDelete" class="modal-action modal-close waves-effect waves-red btn-flat">
+            Cancel
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer blue-grey">
+      <div class="footer-copyright">
+        <small>© 2016 Galvanize, Inc. All Rights Reserved</small>
+      </div>
+    </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="/js/vendor/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/materialize.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/book.js"></script>
+  </body>
+</html>
