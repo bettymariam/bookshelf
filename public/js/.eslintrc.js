@@ -1,11 +1,12 @@
 module.exports = {
   extends: [
+    'ryansobol/browser',
     'ryansobol/es6',
-    'ryansobol/mocha',
-    'ryansobol/node'
+    'ryansobol/jquery',
+    'ryansobol/materialize'
   ],
   rules: {
-    'camelcase': "off",
-    'no-throw-literal': 'off'
-  }
+    'camelcase': [2, {"properties": "never"}],
+  },
+  root: true
 };
