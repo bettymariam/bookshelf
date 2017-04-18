@@ -19,6 +19,16 @@ suite('part3 migrations', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('users columns', (done) => {
     knex('users').columnInfo()
       .then((actual) => {

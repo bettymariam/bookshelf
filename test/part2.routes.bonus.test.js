@@ -29,6 +29,16 @@ suite('part2 routes bonus', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('GET /books/9000', (done) => {
     request(server)
       .get('/books/9000')

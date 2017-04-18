@@ -31,6 +31,16 @@ suite('part3 routes bonus', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('POST /users with no email', (done) => {
     request(server)
       .post('/users')

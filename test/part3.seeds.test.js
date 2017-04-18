@@ -29,6 +29,16 @@ suite('part3 seeds', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('users rows', (done) => {
     knex('users').orderBy('id', 'ASC')
       .then((actual) => {

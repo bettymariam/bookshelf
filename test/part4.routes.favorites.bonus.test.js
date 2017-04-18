@@ -20,6 +20,16 @@ suite('part4 routes favorites bonus', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   beforeEach((done) => {
     knex.seed.run()
       .then(() => {

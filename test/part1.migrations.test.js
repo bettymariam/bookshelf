@@ -19,6 +19,16 @@ suite('part1 migrations', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('books columns', (done) => {
     knex('books').columnInfo()
       .then((actual) => {
