@@ -60,7 +60,7 @@ suite('part4 routes favorites', () => {
           user_id: 1,
           created_at: '2016-06-26T14:26:16.000Z',
           updated_at: '2016-06-26T14:26:16.000Z',
-          title: 'JavaScript, The Good Parts',
+          title: 'JavaScript The Good Parts',
           author: 'Douglas Crockford',
           genre: 'JavaScript',
           description: 'Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that\'s more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code.',
