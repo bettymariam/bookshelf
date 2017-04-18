@@ -1,3 +1,6 @@
 machine:
   node:
     version: node
+database:
+  override:
+    - createdb bookshelf_test
