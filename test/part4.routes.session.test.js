@@ -28,6 +28,16 @@ suite('part4 routes session', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('GET /session without session', (done) => {
     request(server)
       .get('/session')

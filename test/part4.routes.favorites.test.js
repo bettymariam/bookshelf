@@ -20,6 +20,16 @@ suite('part4 routes favorites', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   suite('with session', () => {
     const agent = request.agent(server);
 

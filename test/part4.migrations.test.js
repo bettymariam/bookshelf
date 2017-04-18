@@ -19,6 +19,16 @@ suite('part4 migrations', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('favorites columns', (done) => {
     knex('favorites').columnInfo()
       .then((actual) => {
@@ -96,13 +106,13 @@ suite('part4 migrations', () => {
         /* eslint-disable-next-line camelcase */
         const expected = [{
           table_name: 'favorites',
-          column_name: 'book_id',
-          foreign_table_name: 'books',
+          column_name: 'user_id',
+          foreign_table_name: 'users',
           foreign_column_name: 'id'
         }, {
           table_name: 'favorites',
-          column_name: 'user_id',
-          foreign_table_name: 'users',
+          column_name: 'book_id',
+          foreign_table_name: 'books',
           foreign_column_name: 'id'
         }];
 

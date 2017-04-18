@@ -32,6 +32,16 @@ suite('part3 routes', () => {
       });
   });
 
+  after((done) => {
+    knex.migrate.rollback()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+
   test('POST /users', (done) => {
     const password = 'ilikebigcats';
 
