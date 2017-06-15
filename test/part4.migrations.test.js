@@ -96,7 +96,8 @@ suite('part4 migrations', () => {
           ON tc.constraint_name = kcu.constraint_name
         JOIN information_schema.constraint_column_usage AS ccu
           ON ccu.constraint_name = tc.constraint_name
-      WHERE constraint_type = 'FOREIGN KEY' AND tc.table_name='favorites';
+      WHERE constraint_type = 'FOREIGN KEY' AND tc.table_name='favorites'
+      ORDER BY column_name DESC;
     `;
 
     knex.raw(query)
