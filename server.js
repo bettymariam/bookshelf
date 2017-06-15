@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production' && !process.env.IS_BUILD) {
 
 const express = require('express');
 const app = express();
+app.enable('trust proxy');
 
 app.disable('x-powered-by');
 
