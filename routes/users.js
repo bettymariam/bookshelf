@@ -52,8 +52,6 @@ router.post('/users', (req, res, next) => {
 
     delete user.hashed_password;
     req.session.userId = user.id;
-    // res.setHeader('content-type', 'json');
-    // res.send(user);
     res.json(user)
   })
   .catch((err) => {

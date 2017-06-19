@@ -88,7 +88,8 @@ router.delete('/favorites', authorize, (req, res, next) => {
     })
   }
     knex('favorites')
-    .where('id', id)
+    .where('book_id', id)
+    .andWhere('user_id', userId)
     .delete()
     .returning(['book_id', 'user_id'])
     .then((result) => {
