@@ -11,10 +11,6 @@ Technologies used:
 * PostgrSQL
 * Heroku
 
-Project Members:
-* Betty Chempananical
-* Ken McGrady
-
 Installation Instructions:
 Fork and clone
 Run NPM Install
