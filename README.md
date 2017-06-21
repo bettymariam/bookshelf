@@ -1,6 +1,6 @@
 # bookshelf
 A RESTful, database-driven, HTTP server with user registration, authentication and authorization built using node, Express and Materialize.
-This project was built during my time at Galvanize in their 6 month Web Development Immersive as part of an assignment. I added the back end with routes, migratons, seeds and used knex for queries. Also added user registration, authentication and authorization.
+This project was built during my time at Galvanize in their 6 month Web Development Immersive as part of an assignment. I added the back end with routes, migrations, seeds and used knex for queries. Also added user registration, authentication and authorization.
 
 Technologies used:
 * Materialize
